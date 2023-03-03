@@ -1,39 +1,32 @@
 package com.glybovskij.function;
 
+/**
+ * Задание 1
+ * В переменной minutes лежит число от 0 до 59.
+ * Написать функцию, которая принимает в качестве параметра значение переменной minutes и выводит на консоль
+ * в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
+ * <p>
+ * Протестировать функцию в main.
+ */
 public class Task1 {
 
-    //Задание 1
-    //
-    //В переменной minutes лежит число от 0 до 59.
-    //Написать функцию, которая принимает в качестве параметра значение переменной minutes и выводит на консоль
-    //в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
-    //
-    //Протестировать функцию в main.
-
     public static void main(String[] args) {
-
-        int a = 0;
-        int b = 59;
-
-        int minutes = a + (int) (Math.random() * b);
-        System.out.println("Число (от 0 до 59): " + minutes);
-
-        quarter(minutes);
-
+        printQuarter(randomMinutes(0, 59));
     }
 
-    public static void quarter(int value) {
-
-        if (value <= 15) {
-            System.out.println(value + " -первая четверть часа");
-        } else if (16 < value && value <= 30) {
-            System.out.println(value + " -вторая четверть часа");
-        } else if (31 < value && value <= 45) {
-            System.out.println(value + " -третья четверть часа");
-        } else if (46 < value && value <= 59) {
-            System.out.println(value + " -четвертая четверть часа");
+    public static void printQuarter(int minutes) {
+        if (minutes <= 15) {
+            System.out.println(minutes + " -первая четверть часа");
+        } else if (minutes <= 30) {
+            System.out.println(minutes + " -вторая четверть часа");
+        } else if (minutes <= 45) {
+            System.out.println(minutes + " -третья четверть часа");
+        } else if (minutes <= 59) {
+            System.out.println(minutes + " -четвертая четверть часа");
         }
-
     }
 
+    public static int randomMinutes(int initialValue, int finalValue) {
+        return initialValue + (int) (Math.random() * finalValue);
+    }
 }
