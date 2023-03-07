@@ -17,25 +17,23 @@ public class Task3 {
         double salary = 600;
         int period = 38;
 
-        printMoneyInAccounts(salary,period);
+        printMoneyInAccounts(salary, period);
     }
 
     public static void printMoneyInAccounts(double salary, int period) {
-        double myAccount = 0;
-        double brokerAccount = 0;
+        double account1 = 0;
+        double account2 = 0;
         int spending = 300;
         double contribution = 0.1;
         for (int i = 1; i < period; i++) {
             if (i % 6 == 0) {
                 salary = (salary + 400);
-                brokerAccount += salary * contribution * 0.02;
-                myAccount += salary - spending - (salary * contribution);
-            } else {
-                brokerAccount += salary * contribution * 0.02;
-                myAccount += salary - spending - (salary * contribution);
             }
+            account2 += salary * contribution;
+            account2 += account2 * 0.02;
+            account1 += salary - spending - (salary * contribution);
         }
-        System.out.println(myAccount);
-        System.out.println(brokerAccount);
+        System.out.println(account1);
+        System.out.println(account2);
     }
 }

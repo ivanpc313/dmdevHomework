@@ -12,14 +12,17 @@ package com.glybovskij.cycle;
 public class Task2 {
 
     public static void main(String[] args) {
-        int num = 653426, reversed = 0;
+    int number = 542152356;
 
-        while (num != 0) {
+    printReverseNumber(number);
+    }
 
-            int digit = num % 10;
+    public static void printReverseNumber(int number) {
+        int reversed = 0;
+        while (number != 0) {
+            int digit = number % 10;
             reversed = reversed * 10 + digit;
-
-            num /= 10;
+            number /= 10;
         }
         System.out.println("Reversed Number: " + reversed);
     }

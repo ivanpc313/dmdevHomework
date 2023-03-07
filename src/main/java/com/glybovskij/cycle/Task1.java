@@ -14,32 +14,33 @@ public class Task1 {
 
         printEvenNumbers(number);
         printOddNumbers(number);
-
     }
 
     private static void printOddNumbers(int number) {
-        System.out.print("Нечетные числа ");
-        int oddNumbs;
+        System.out.print("Нечетные числа: ");
+        int counter = 0;
         while (number > 0) {
-            oddNumbs = number % 10;
-            if (oddNumbs % 2 != 0) {
-                System.out.print(oddNumbs + ", ");
+            int oddNumb;
+            oddNumb = number % 10;
+            if (oddNumb % 2 != 0) {
+                counter++;
             }
             number = number / 10;
         }
-        System.out.println(" ");
+        System.out.println(counter);
     }
 
     private static void printEvenNumbers(int number) {
-        System.out.print("Четные числа ");
-        int evenNumbs;
+        System.out.print("Четные числа: ");
+        int counter = 0;
         while (number > 0) {
-            evenNumbs = number % 10;
-            if (evenNumbs % 2 == 0) {
-                System.out.print(evenNumbs + ", ");
+            int evenNumb;
+            evenNumb = number % 10;
+            if (evenNumb % 2 == 0) {
+                counter++;
             }
             number = number / 10;
         }
-        System.out.println(" ");
+        System.out.println(counter);
     }
 }
