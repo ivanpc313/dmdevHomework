@@ -12,31 +12,30 @@ package com.glybovskij.array;
 public class Task2 {
 
     public static void main(String[] args) {
-        char[] array = {'a', '6', 'y', 'P', 'T', 'q', '9', '+' };
+        char[] array = {'a', '6', 'y', 'P', 'T', 'q', '9', '+'};
 
         int[] generatedArray = generateToNumbers(array);
-        printResult(generatedArray);
+        printMoreOfAverageResult(generatedArray);
     }
 
-    private static void printResult(int[] array) {
+    private static void printMoreOfAverageResult(int[] array) {
         int sum = 0;
-        double average;
-        for (int j : array) {
-            sum += j;
+        for (int value : array) {
+            sum += value;
         }
+        double average;
         average = sum / (double) array.length;
-        for (int j : array) {
-            if (j > average) {
-                System.out.print(j + " ");
+        for (int value : array) {
+            if (value > average) {
+                System.out.print(value + " ");
             }
         }
     }
 
     private static int[] generateToNumbers(char[] array) {
         int[] generatedArray = new int[array.length];
-        for (int i = 0, index1 = 0; i < array.length; i++) {
-            generatedArray[index1] = array[i];
-            index1++;
+        for (int i = 0; i < array.length; i++) {
+            generatedArray[i] = array[i];
         }
         return generatedArray;
     }

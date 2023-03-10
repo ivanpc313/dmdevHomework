@@ -15,34 +15,34 @@ public class Task1 {
         int[] array = {3, 5, -6, 3, 2, -9, 0, -123};
 
         int[] positiveArray = getPositiveArray(array);
-        printResultArray (positiveArray);
+        printMultipliedArray(positiveArray);
     }
 
-    private static void printResultArray(int[] positiveArray) {
+    private static void printMultipliedArray(int[] positiveArray) {
         for (int i = 0; i < positiveArray.length; i++) {
             positiveArray[i] = positiveArray[i] * positiveArray.length;
             System.out.print(positiveArray[i] + " ");
         }
     }
 
+    private static int[] getPositiveArray(int[] array) {
+        int[] positiveArray = new int[positiveSize(array)];
+        for (int i = 0, j = 0; i < array.length; i++) {
+            if (array[i] >= 0) {
+                positiveArray[j] = array[i];
+                j++;
+            }
+        }
+        return positiveArray;
+    }
+
     private static int positiveSize(int[] array) {
         int size = 0;
-        for (int j : array) {
-            if (j >= 0) {
+        for (int value : array) {
+            if (value >= 0) {
                 size++;
             }
         }
         return size;
-    }
-
-    private static int[] getPositiveArray(int[] array) {
-        int[] positiveArray = new int[positiveSize(array)];
-        for (int i = 0, index1 = 0; i < array.length; i++) {
-            if (array[i] >= 0) {
-                positiveArray[index1] = array[i];
-                index1++;
-            }
-        }
-        return positiveArray;
     }
 }

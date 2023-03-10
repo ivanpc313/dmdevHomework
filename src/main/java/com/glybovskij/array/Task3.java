@@ -1,4 +1,5 @@
 package com.glybovskij.array;
+
 import java.util.Arrays;
 
 /**
@@ -37,6 +38,9 @@ public class Task3 {
         int[] positiveNumbers = new int[getPositiveNumbersSize(array)];
         int[] negativeNumbers = new int[getNegativeNumbersSize(array)];
         int[] zeroNumbers = new int[getZeroNumbersSize(array)];
+        resultArray[0] = negativeNumbers;
+        resultArray[1] = zeroNumbers;
+        resultArray[2] = positiveNumbers;
 
         for (int i = 0, index1 = 0, index2 = 0, index3 = 0; i < array.length; i++) {
             if (array[i] > 0) {
@@ -45,14 +49,11 @@ public class Task3 {
             } else if (array[i] < 0) {
                 negativeNumbers[index2] = array[i];
                 index2++;
-            } else if (array[i] == 0) {
+            } else {
                 zeroNumbers[index3] = array[i];
                 index3++;
             }
         }
-        resultArray[0] = negativeNumbers;
-        resultArray[1] = zeroNumbers;
-        resultArray[2] = positiveNumbers;
         return resultArray;
     }
 
