@@ -3,7 +3,6 @@ package com.glybovskij.introductionInOOP;
 import java.util.Arrays;
 
 public class Apartment {
-
     private int apartmentNumber;
     private Room[] rooms;
 

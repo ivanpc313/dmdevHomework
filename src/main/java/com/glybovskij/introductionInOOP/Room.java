@@ -1,7 +1,6 @@
 package com.glybovskij.introductionInOOP;
 
 public class Room {
-
     private boolean iSPassageRoom;
 
     public Room(boolean iSPassageRoom) {

@@ -1,6 +1,5 @@
 package com.glybovskij.introductionInOOP;
 
-<<<<<<< HEAD
 /**
  * Задание 1
  * <p>
@@ -26,10 +25,7 @@ package com.glybovskij.introductionInOOP;
  * его этажах, квартирах и комнатах, вызывая методы print.
  */
 public class Main {
-=======
-public class Main {
 
->>>>>>> origin/develop
     public static void main(String[] args) {
 
         Room room1 = new Room(true);
@@ -65,13 +61,8 @@ public class Main {
         printAllInformation(home);
     }
 
-<<<<<<< HEAD
-    public static void printAllInformation(Home home) {
-        home.print(home.getHomeNumber(), home.getFloors());
-=======
     public static void printAllInformation(Home home){
         home.print(home.getHomeNumber(),home.getFloors());
->>>>>>> origin/develop
         Floor[] floors = home.getFloors();
         for (Floor floor : floors) {
             System.out.println(floor);

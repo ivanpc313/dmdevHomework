@@ -1,7 +1,6 @@
 package com.glybovskij.introductionInOOP;
 
 public class Home {
-
     private int homeNumber;
     private Floor[] floors;
 
