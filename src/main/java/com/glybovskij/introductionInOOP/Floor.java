@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class Floor {
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/develop
     private int floorNumber;
     private Apartment[] apartment;
 
