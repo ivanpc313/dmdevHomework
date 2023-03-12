@@ -11,30 +11,10 @@ public class Floor {
         this.apartment = apartment;
     }
 
-    public void print(int floorNumber, Apartment[] apartment) {
-        System.out.println("Этаж " + floorNumber + "," + "количество квартир " + apartment.length);
-    }
-
     public Apartment[] getApartment() {
         return apartment;
     }
-
-    public void setApartment(Apartment[] apartment) {
-        this.apartment = apartment;
-    }
-
-    public int getFloorNumber() {
-        return floorNumber;
-    }
-
-    public void setFloorNumber(int floorNumber) {
-        this.floorNumber = floorNumber;
-    }
-    @Override
-    public String toString() {
-        return "Floor{" +
-                "floorNumber=" + floorNumber +
-                ", apartment=" + Arrays.toString(apartment) +
-                '}';
+    public void print() {
+        System.out.println("Этаж " + floorNumber + "," + "количество квартир " + apartment.length);
     }
 }

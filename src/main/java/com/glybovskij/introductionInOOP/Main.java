@@ -61,11 +61,16 @@ public class Main {
         printAllInformation(home);
     }
 
-    public static void printAllInformation(Home home){
-        home.print(home.getHomeNumber(),home.getFloors());
-        Floor[] floors = home.getFloors();
-        for (Floor floor : floors) {
-            System.out.println(floor);
+    public static void printAllInformation(Home home) {
+        home.print();
+        for (Floor floor : home.getFloors()) {
+            floor.print();
+            for (Apartment apartment : floor.getApartment()) {
+                apartment.print();
+                for (Room room : apartment.getRooms()) {
+                    room.print();
+                }
+            }
         }
     }
 }

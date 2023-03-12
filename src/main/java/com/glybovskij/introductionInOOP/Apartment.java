@@ -11,15 +11,12 @@ public class Apartment {
         this.rooms = rooms;
     }
 
-    public void print(int apartmentNumber, Room[] rooms) {
+    public Room[] getRooms() {
+        return rooms;
+    }
+
+    public void print() {
         System.out.println("Квартира № " + apartmentNumber + "," + "количество комнат " + rooms.length);
     }
 
-    @Override
-    public String toString() {
-        return "Apartment{" +
-                "apartmentNumber=" + apartmentNumber +
-                ", rooms=" + Arrays.toString(rooms) +
-                '}';
-    }
 }

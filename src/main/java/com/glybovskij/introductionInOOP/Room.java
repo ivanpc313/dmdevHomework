@@ -7,7 +7,7 @@ public class Room {
         this.iSPassageRoom = iSPassageRoom;
     }
 
-    public void print(boolean iSPassageRoom) {
+    public void print() {
         if (iSPassageRoom) {
             System.out.println("Проходная комната");
         } else {
@@ -15,10 +15,4 @@ public class Room {
         }
     }
 
-    @Override
-    public String toString() {
-        return "Room{" +
-                "iSPassageRoom=" + iSPassageRoom +
-                '}';
-    }
 }
