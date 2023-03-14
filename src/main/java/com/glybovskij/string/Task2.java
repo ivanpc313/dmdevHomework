@@ -17,14 +17,13 @@ package com.glybovskij.string;
 public class Task2 {
 
     public static void main(String[] args) {
-
         String value = "Привет 8, как 1 2 твои дела? Может4, сделать 3 дело?";
 
-        int result = sumNumbersOfArray(getArrayOfNumbers(value));
+        int result = sumNumbersOfArray(extractDigitsFromString(value));
         System.out.println(result);
     }
 
-    private static int[] getArrayOfNumbers(String value) {
+    private static int[] extractDigitsFromString(String value) {
         String stringWithoutSpace = value.replace(" ", "");
         StringBuilder digits = new StringBuilder();
         for (int i = 0; i < stringWithoutSpace.length(); i++) {

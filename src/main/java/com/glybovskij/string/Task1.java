@@ -12,23 +12,21 @@ package com.glybovskij.string;
 public class Task1 {
 
     public static void main(String[] args) {
-
         String value = "abc Cpddd Dio OsfWw";
-        toUpperDistinctString(value);
+        System.out.println(toUpperDistinctString(value));
     }
 
-    private static void toUpperDistinctString(String value) {
-        String replace = value.replace(" ", "");
+    private static StringBuilder toUpperDistinctString(String value) {
+        String upperCaseValue = value.replace(" ", "").toUpperCase();
         StringBuilder resultString = new StringBuilder();
-        String upperCaseString = replace.toUpperCase();
-        char lastSymbol = upperCaseString.charAt(upperCaseString.length() - 1);
-        for (int i = 0; i < upperCaseString.length() - 1; i++) {
-            if (upperCaseString.charAt(i) != upperCaseString.charAt(i + 1)) {
-                resultString.append(upperCaseString.charAt(i));
+        char lastSymbol = upperCaseValue.charAt(upperCaseValue.length() - 1);
+        for (int i = 0; i < upperCaseValue.length() - 1; i++) {
+            if (upperCaseValue.charAt(i) != upperCaseValue.charAt(i + 1)) {
+                resultString.append(upperCaseValue.charAt(i));
             }
         }
         resultString.append(lastSymbol);
-        System.out.println(resultString);
+        return resultString;
     }
 }
 
