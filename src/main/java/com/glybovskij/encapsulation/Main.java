@@ -21,8 +21,15 @@ package com.glybovskij.encapsulation;
 public class Main {
 
     public static void main(String[] args) {
-        Atm atm = new Atm(5, 2, 5);
-        boolean cash = atm.getCash(280);
-        System.out.println(cash);
+        Atm atm = new Atm(10, 5, 1);
+        boolean ivan = atm.getCash(30);
+        System.out.println(ivan);
+        System.out.println();
+        boolean denis = atm.getCash(90);
+        System.out.println(denis);
+        System.out.println();
+        atm.addition10(5);
+        boolean denisSecondAttempt = atm.getCash(90);
+        System.out.println(denisSecondAttempt);
     }
 }
