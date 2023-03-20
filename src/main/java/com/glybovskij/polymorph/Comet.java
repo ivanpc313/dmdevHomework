@@ -1,8 +1,8 @@
 package com.glybovskij.polymorph;
 
-public class Comet extends SpaceObjects {
-    Radius radius;
-    boolean seenFromEarth;
+public class Comet extends SpaceObject {
+    private Radius radius;
+    private boolean seenFromEarth;
 
     public Comet(double weight, Radius radius, boolean seenFromEarth) {
         super(weight);
@@ -20,7 +20,7 @@ public class Comet extends SpaceObjects {
 
     @Override
     public double getDiameter() {
-        return radius.diameter(this.radius);
+        return radius.diameter();
     }
 
     @Override

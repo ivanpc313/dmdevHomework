@@ -1,24 +1,24 @@
 package com.glybovskij.polymorph;
 
-public class Planet extends SpaceObjects {
-    boolean isHaveAtmosphere;
-    String name;
-    Radius radius;
+public class Planet extends SpaceObject {
+    private boolean hasAtmosphere;
+    private String name;
+    private Radius radius;
 
     public Planet(double weight, Radius radius, boolean isHaveAtmosphere, String name) {
         super(weight);
         this.radius = radius;
-        this.isHaveAtmosphere = isHaveAtmosphere;
+        this.hasAtmosphere = isHaveAtmosphere;
         this.name = name;
     }
 
     @Override
     public double getDiameter() {
-        return radius.diameter(this.radius);
+        return radius.diameter();
     }
 
     public void mayBeLive() {
-        if (this.isHaveAtmosphere) {
+        if (this.hasAtmosphere) {
             System.out.println("Планета " + name + " может быть обитаема");
         } else {
             System.out.println("Планета " + name + " вероятнее всего необитаема");
@@ -28,7 +28,7 @@ public class Planet extends SpaceObjects {
     @Override
     public String toString() {
         return "Planet{" +
-                "isHaveAtmosphere=" + isHaveAtmosphere +
+                "isHaveAtmosphere=" + hasAtmosphere +
                 ", name='" + name + '\'' +
                 ", radius=" + radius +
                 '}';

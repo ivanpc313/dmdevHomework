@@ -1,6 +1,7 @@
 package com.glybovskij.polymorph;
 
 public class SpaceRunner {
+
     public static void main(String[] args) {
         Planet planet1 = new Planet(33, new Radius(15), true, "Earth");
         planet1.mayBeLive();
@@ -8,7 +9,7 @@ public class SpaceRunner {
 
         System.out.println();
         Meteorite meteorite1 = new Meteorite(33, 562, true, new Radius(54));
-        meteorite1.isDangerous();
+        meteorite1.Dangerous();
         System.out.println(meteorite1);
 
         System.out.println();

@@ -8,7 +8,7 @@ public class Radius {
         this.radius = radius;
     }
 
-    public double diameter(Radius radius) {
+    public double diameter() {
         return this.radius * 2;
     }
 

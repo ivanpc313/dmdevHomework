@@ -1,9 +1,9 @@
 package com.glybovskij.polymorph;
 
-public class Asteroid extends SpaceObjects implements Officiality {
-    String material;
-    double volume;
-    Radius radius;
+public class Asteroid extends SpaceObject implements Officiality {
+    private String material;
+    private double volume;
+    private Radius radius;
 
     public Asteroid(double weight, String material, double volume, Radius radius) {
         super(weight);

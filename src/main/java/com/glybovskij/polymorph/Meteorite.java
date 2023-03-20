@@ -1,9 +1,9 @@
 package com.glybovskij.polymorph;
 
-public class Meteorite extends SpaceObjects implements Dangerous {
-    double square;
-    boolean closeness;
-    Radius radius;
+public class Meteorite extends SpaceObject implements Dangerous {
+    private double square;
+    private boolean closeness;
+    private Radius radius;
 
     public Meteorite(double weight, double square, boolean closeness, Radius radius) {
         super(weight);
@@ -18,7 +18,7 @@ public class Meteorite extends SpaceObjects implements Dangerous {
     }
 
     @Override
-    public void isDangerous() {
+    public void Dangerous() {
         if (radius.getRadius() > 30 && closeness) {
             System.out.println("Метеорит опасен для Земли");
         } else {
